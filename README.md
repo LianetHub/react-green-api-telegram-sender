@@ -1,4 +1,4 @@
-# Telegram Chat · GREEN-API
+# Telegram Chat GREEN-API
 
 Веб-чат на React для отправки и приёма текстовых сообщений Telegram через [GREEN-API](https://green-api.com/telegram/).
 
@@ -36,10 +36,6 @@ npm run dev
    - по Telegram user id / готовому `chatId`.
 3. Отправьте текстовое сообщение.
 4. Ответ из Telegram появится в чате автоматически.
-
-## Настройка инстанса
-
-При старте опроса приложение само вызывает `setSettings`: очищает `webhookUrl` и включает только входящие уведомления.
 
 ## Стек
 

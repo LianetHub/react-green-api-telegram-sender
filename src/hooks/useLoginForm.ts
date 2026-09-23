@@ -32,9 +32,13 @@ export function useLoginForm({ onLogin }: Options) {
 		try {
 			await onLogin({ idInstance: id, apiTokenInstance: token });
 		} catch (err) {
-			setError(
-				err instanceof Error ? err.message : "Не удалось проверить данные",
-			);
+			const message =
+				err instanceof Error
+					? err.message
+					: typeof err === "string"
+						? err
+						: "Не удалось проверить данные";
+			setError(message || "Не удалось проверить данные");
 		} finally {
 			setChecking(false);
 		}
