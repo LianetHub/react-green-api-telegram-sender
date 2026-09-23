@@ -1,0 +1,65 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.login-page {
+	min-height: 100%;
+	display: grid;
+	place-items: center;
+	padding: 1.5rem;
+	background:
+		radial-gradient(
+			ellipse at 20% 10%,
+			rgba(42, 109, 244, 0.25),
+			transparent 50%
+		),
+		radial-gradient(
+			ellipse at 80% 90%,
+			rgba(42, 109, 244, 0.12),
+			transparent 45%
+		),
+		$bg-deep;
+}
+
+.login-card {
+	width: min(420px, 100%);
+	background: $bg-sidebar;
+	color: $text-on-dark;
+	border-radius: 16px;
+	padding: 2rem 1.75rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+
+	.btn.primary {
+		margin-top: 0.5rem;
+		width: 100%;
+	}
+}
+
+.login-title {
+	margin: 0;
+	font-size: 1.75rem;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+}
+
+.login-subtitle {
+	margin: -0.4rem 0 0.5rem;
+	color: $text-muted;
+	font-size: 0.95rem;
+}
+
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+	font-size: 0.85rem;
+	color: $text-muted;
+
+	input {
+		@include dark-input;
+		border-radius: 10px;
+		padding: 0.75rem 0.9rem;
+	}
+}

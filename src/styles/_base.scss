@@ -1,0 +1,33 @@
+@use "variables" as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	font-family: $font;
+	color: $text;
+	background: $bg-deep;
+	-webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea {
+	font: inherit;
+}
+
+.form-error {
+	margin: 0;
+	color: $danger;
+	font-size: 0.85rem;
+}

@@ -1,0 +1,40 @@
+@use "variables" as *;
+
+.btn {
+	border: none;
+	border-radius: 10px;
+	padding: 0.7rem 1.1rem;
+	cursor: pointer;
+	transition:
+		background-color 0.15s ease,
+		opacity 0.15s ease;
+
+	&:disabled {
+		opacity: 0.55;
+		cursor: not-allowed;
+	}
+
+	&.primary {
+		background: $accent;
+		color: #fff;
+
+		&:hover:not(:disabled) {
+			background: $accent-hover;
+		}
+	}
+
+	&.ghost {
+		background: transparent;
+		color: $text-on-dark;
+		border: 1px solid $border;
+
+		&:hover {
+			background: rgba(255, 255, 255, 0.06);
+		}
+	}
+
+	&.compact {
+		padding: 0.55rem 0.85rem;
+		white-space: nowrap;
+	}
+}

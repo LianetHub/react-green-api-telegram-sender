@@ -1,0 +1,24 @@
+@use "variables" as *;
+
+@mixin mobile {
+	@media (max-width: $mobile) {
+		@content;
+	}
+}
+
+@mixin dark-input {
+	border: 1px solid $border;
+	background: rgba(0, 0, 0, 0.25);
+	color: $text-on-dark;
+	outline: none;
+
+	&:focus {
+		border-color: $accent;
+	}
+}
+
+@mixin ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
